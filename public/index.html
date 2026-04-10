@@ -1,21 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gemini AI Chatbot</title>
+  <title>KMM - Konsul Masak Makan | Pakar Diet & Meal Plan Indonesia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1>Gemini AI Chatbot</h1>
-    <div id="chat-box" class="chat-box"></div>
+
+  <header class="text-center pt-8 pb-4">
+    <div class="inline-flex items-center gap-2 mb-2">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="text-2xl font-bold tracking-tight text-emerald-800">KMM</span>
+    </div>
+    <p class="text-emerald-600 font-medium">Konsul Masak Makan — Solusi Gizi Lokal Anda</p>
+  </header>
+
+  <div id="container" class="container">
+    <div class="header-section">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl">👩‍🍳</div>
+        <div>
+          <h1 class="text-xl font-bold">Asisten KMM</h1>
+          <p class="text-sm opacity-90">Pakar Diet & Meal Plan Indonesia (Online)</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="chat-box" class="chat-box">
+      <div class="message bot-message">
+        <span class="badge">Selamat Datang</span>
+        <p>Halo! Saya asisten <strong>KMM (Konsul Masak Makan)</strong>. Saya siap membantu Anda merencanakan pola makan sehat dengan bahan lokal Indonesia.</p>
+        <p>Ada yang bisa saya bantu hari ini?</p>
+      </div>
+    </div>
+
     <form id="chat-form">
-      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" required />
-      <button type="submit">Send</button>
+      <input type="text" id="user-input" placeholder="Tanya tentang resep sehat, kalori rendang, atau meal plan..." autocomplete="off" required />
+      <button type="submit">
+        <span class="hidden sm:inline">Kirim</span>
+        <svg class="sm:hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </button>
     </form>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="script.js"></script>
+
+  <footer class="max-w-[900px] mx-auto mt-4 px-4 text-center text-sm text-emerald-700/60 pb-8">
+    &copy; 2024 Konsul Masak Makan (KMM) - Mendukung Ketahanan Pangan & Kesehatan Indonesia.
+  </footer>
+
+   <script src="script.js"></script>
 </body>
 </html>
